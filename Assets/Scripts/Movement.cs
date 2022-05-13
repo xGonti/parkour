@@ -7,10 +7,17 @@ public class Movement : MonoBehaviour //Theo och Michal
     public float MovementSpeed = 1; //Adjustable rörelse hastighet 
     public float JumpForce = 1; //Adjustable hoppande 
     private Rigidbody2D _rigidbody;
+    CameraFollow follow;
     PhotonView view;
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>(); // Generisk kod!!!
+        view = GetComponent<PhotonView>();
+        if (view.IsMine)
+        {
+            follow = FindObjectOfType<CameraFollow>();
+            follow.target = transform;
+        }
     }
 
     private void Update()
