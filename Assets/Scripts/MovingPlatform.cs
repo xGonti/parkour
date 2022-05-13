@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Av Michal
-// Checkpoint = Ett eller flera stället som platformen ska röra sig till
+// Checkpoint = Ett eller flera stället som platformen ska röra sig till/imellan
 public class MovingPlatform : MonoBehaviour
 {
     public float speed; // Hur snabbt platform rör sig
